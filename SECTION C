@@ -1,0 +1,62 @@
+Technical Test (Subjective)
+
+1.	Sort the list with quick sort or merge sort (n log n) then do a single pass over the list comparing the current number to the previous O(n). If the previous number equals the current then you have a duplicate.
+Pseudocode : 
+
+Array array= {65,54,98,99, 56, 54,…………………………………………..100};
+/* number 54 is repeated twice in the above 1-100 random numbers)*/
+Array sorted= sort(array);
+For(int i=1; i<sorted.length; i++)
+int p= sorted [i-1]
+int c = sorted [i]
+if (p==c) print “duplicate”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program 3 
+
+
+#include<stdio.h>
+
+The function assumes that there are at least two
+elements in array.
+The function returns a negative value if the array is
+sorted in decreasing order.
+Returns 0 if elements are equal  */
+int maxDiff(int arr[], int arr_size)
+{
+int max_diff = arr[1] - arr[0];
+int min_element = arr[0];
+int i;
+for(i = 1; i < arr_size; i++)
+{
+if (arr[i] - min_element > max_diff)
+max_diff = arr[i] - min_element;
+if (arr[i] < min_element)
+min_element = arr[i];
+}
+return max_diff;
+}
+
+
+
+
+
+
